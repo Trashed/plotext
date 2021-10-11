@@ -16,10 +16,7 @@ func main() {
 	n := 60
 	fakeTOHLCVs := examples.CreateTOHLCVExampleData(n)
 
-	p, err := plot.New()
-	if err != nil {
-		log.Panic(err)
-	}
+	p := plot.New()
 
 	p.Title.Text = "Candlesticks"
 	p.X.Label.Text = "Time"
